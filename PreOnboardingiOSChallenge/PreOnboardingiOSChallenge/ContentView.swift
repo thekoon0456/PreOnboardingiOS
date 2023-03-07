@@ -28,8 +28,16 @@ class ContentView: UIView {
     @IBOutlet private var progressView: UIProgressView!
     @IBOutlet private var loadButton: UIButton!
     private var observation: NSKeyValueObservation! //키-밸류 observation만들기. 만들면 deinit까지 같이 만들기
+    private var task: URLSessionDataTask!
     
-    deinit { //자동으로 invalidate해주지 않음
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        loadButton.setTitle("Stop", for: .selected)
+        loadButton.setTitle("Load", for: .normal)
+        loadButton.isSelected = false
+    }
+    
+    deinit { //시스템에서 자동으로 invalidate해주지 않음
         observation.invalidate()
         observation = nil
     }
@@ -37,7 +45,7 @@ class ContentView: UIView {
     func reset() {
         imageView.image = .init(systemName: "photo")
         progressView.progress = 0
-        loadButton.isEnabled = true
+        loadButton.isSelected = false
     }
     
     func loadImage() {
@@ -45,7 +53,13 @@ class ContentView: UIView {
     }
     
     @IBAction private func touchUpLoadButton(_ sender: UIButton) {
-        reset()
+        
+        sender.isSelected = !sender.isSelected
+        
+        guard sender.isSelected else {
+            task.cancel()
+            return
+        }
         
         guard (0...4).contains(sender.tag) else {
             fatalError("버튼 태그를 확인해주세요")
@@ -56,9 +70,15 @@ class ContentView: UIView {
         
         //dataTask는 resume하면 백그라운드 스레드에서 실햄
         //DispatchQueue.grobal()은 백그라운드 스레드에서 실행
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                fatalError(error.localizedDescription)
+                guard error.localizedDescription == "cancelled" else {
+                    fatalError(error.localizedDescription)
+                }
+                DispatchQueue.main.async {
+                    self.reset()
+                }
+                return
             }
             
             guard let data = data, let image = UIImage(data: data) else {
@@ -71,6 +91,8 @@ class ContentView: UIView {
             //UI업데이트. 메인스레드에서
             DispatchQueue.main.async {
                 self.imageView.image = image
+                //완료된 뒤 상태값 바꿈
+                self.loadButton.isSelected = false
             }
         }
         //task의 progress를 observing
@@ -85,7 +107,6 @@ class ContentView: UIView {
         
         task.resume()
     }
-
 }
 
 //extension UIImageView {

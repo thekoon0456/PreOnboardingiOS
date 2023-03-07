@@ -31,15 +31,15 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aI-KY-xLL">
-                                                <rect key="frame" x="308" y="33" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="321.33333333333331" y="33" width="61.666666666666686" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load" cornerStyle="large"/>
                                                 <connections>
                                                     <action selector="touchUpLoadButton:" destination="0PO-TI-d9T" eventType="touchUpInside" id="iq0-VA-qEC"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xj3-9M-QLq">
-                                                <rect key="frame" x="165" y="48" width="143" height="4"/>
+                                                <rect key="frame" x="165" y="48" width="156.33333333333337" height="4"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,15 +71,15 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-7J-W36">
-                                                <rect key="frame" x="308" y="33" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="321.33333333333331" y="33" width="61.666666666666686" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load" cornerStyle="large"/>
                                                 <connections>
                                                     <action selector="touchUpLoadButton:" destination="D3u-tB-Bo5" eventType="touchUpInside" id="l34-1n-q7K"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-2j-uFa">
-                                                <rect key="frame" x="165" y="48" width="143" height="4"/>
+                                                <rect key="frame" x="165" y="48" width="156.33333333333337" height="4"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -111,15 +111,15 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw2-X8-97H">
-                                                <rect key="frame" x="308" y="33" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="321.33333333333331" y="33" width="61.666666666666686" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load" cornerStyle="large"/>
                                                 <connections>
                                                     <action selector="touchUpLoadButton:" destination="vbz-g1-6Zy" eventType="touchUpInside" id="Jhi-Gc-whZ"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-02-T5V">
-                                                <rect key="frame" x="165" y="48" width="143" height="4"/>
+                                                <rect key="frame" x="165" y="48" width="156.33333333333337" height="4"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -151,15 +151,15 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-Oy-wVJ">
-                                                <rect key="frame" x="308" y="33" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="321.33333333333331" y="33" width="61.666666666666686" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load" cornerStyle="large"/>
                                                 <connections>
                                                     <action selector="touchUpLoadButton:" destination="cuq-if-7CV" eventType="touchUpInside" id="6XH-uL-Wq7"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JEE-6g-aNZ">
-                                                <rect key="frame" x="165" y="48" width="143" height="4"/>
+                                                <rect key="frame" x="165" y="48" width="156.33333333333337" height="4"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -191,15 +191,15 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dW0-yq-eAt">
-                                                <rect key="frame" x="308" y="33" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="321.33333333333331" y="33" width="61.666666666666686" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load" cornerStyle="large"/>
                                                 <connections>
                                                     <action selector="touchUpLoadButton:" destination="d2Y-K1-grg" eventType="touchUpInside" id="pOJ-Rh-OAE"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f1A-2o-t1L">
-                                                <rect key="frame" x="165" y="48" width="143" height="4"/>
+                                                <rect key="frame" x="165" y="48" width="156.33333333333337" height="4"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -223,9 +223,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZI-tJ-Pyl">
-                                <rect key="frame" x="30" y="599" width="333" height="50"/>
+                                <rect key="frame" x="30" y="599" width="333" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="XFa-oo-ehv"/>
+                                    <constraint firstAttribute="height" constant="40" id="XFa-oo-ehv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load All Images"/>
@@ -244,7 +244,7 @@
                             <constraint firstItem="MR3-3p-J7k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tc8-bT-W38"/>
                             <constraint firstItem="0ZI-tJ-Pyl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WOm-EF-DJk"/>
                             <constraint firstItem="0ZI-tJ-Pyl" firstAttribute="top" secondItem="MR3-3p-J7k" secondAttribute="bottom" constant="40" id="jE0-VE-f76"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ZI-tJ-Pyl" secondAttribute="bottom" constant="179" id="kAe-CE-U9c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0ZI-tJ-Pyl" secondAttribute="bottom" constant="130" id="kAe-CE-U9c"/>
                         </constraints>
                     </view>
                     <connections>
