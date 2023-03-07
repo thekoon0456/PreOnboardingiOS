@@ -27,6 +27,12 @@ class ContentView: UIView {
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var progressView: UIProgressView!
     @IBOutlet private var loadButton: UIButton!
+    private var observation: NSKeyValueObservation! //키-밸류 observation만들기. 만들면 deinit까지 같이 만들기
+    
+    deinit { //자동으로 invalidate해주지 않음
+        observation.invalidate()
+        observation = nil
+    }
     
     func reset() {
         imageView.image = .init(systemName: "photo")
@@ -49,6 +55,7 @@ class ContentView: UIView {
         let request = URLRequest(url: url) //여기까진 메인스레드. 버튼-화면에서 조작하는것이므로
         
         //dataTask는 resume하면 백그라운드 스레드에서 실햄
+        //DispatchQueue.grobal()은 백그라운드 스레드에서 실행
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 fatalError(error.localizedDescription)
@@ -66,6 +73,15 @@ class ContentView: UIView {
                 self.imageView.image = image
             }
         }
+        //task의 progress를 observing
+        observation = task.progress.observe(\.fractionCompleted, //fractionCompleted: 얼만큼 완료했는지
+                                             options: [.new],
+                                             changeHandler: { progress, change in
+            //UI업데이트. 메인스레드에서
+            DispatchQueue.main.async {
+                self.progressView.progress = Float(progress.fractionCompleted)
+            }
+        })
         
         task.resume()
     }
